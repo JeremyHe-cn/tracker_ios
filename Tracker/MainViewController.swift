@@ -20,6 +20,8 @@ class MainViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let manhuagui = Manhuagui()
+        manhuagui.crawl(url: "http://www.manhuagui.com/comic/883/")
     }
 
     override func didReceiveMemoryWarning() {

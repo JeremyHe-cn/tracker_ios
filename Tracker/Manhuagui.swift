@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import Alamofire
 
 class Manhuagui {
-    var url: String = "" {
-        didSet {
-            crawl()
-        }
-    }
     
-    func crawl() {
-        
+    func crawl(url: String) {
+        Alamofire.request(url).responseString { resp in
+            if let html = resp.value {
+                let range = html.range(of: "<h1>(.*?)</h1>", options: String.CompareOptions.regularExpression, range: nil, locale: nil)
+                print(html.substring(with: range!))
+            }
+        }
     }
 }
