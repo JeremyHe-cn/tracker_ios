@@ -9,6 +9,8 @@
 import Foundation
 
 struct Comic {
-    var name : String
-    var lastestChapter : String
+    var cover: String
+    var name: String
+    var date: String
+    var chapter: String
 }

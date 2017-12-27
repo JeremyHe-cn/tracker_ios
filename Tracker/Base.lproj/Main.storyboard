@@ -9,61 +9,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tracker-->
+        <!--最近更新-->
         <scene sceneID="bV7-Li-tir">
             <objects>
                 <tableViewController id="bR9-Fq-VlG" customClass="MainViewController" customModule="Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="107" sectionHeaderHeight="28" sectionFooterHeight="28" id="ce1-nQ-1vW">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="ce1-nQ-1vW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="comic" rowHeight="107" id="1DA-SE-Wa9" customClass="ComicCell" customModule="Tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="107"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="comic" rowHeight="110" id="1DA-SE-Wa9" customClass="ComicCell" customModule="Tracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1DA-SE-Wa9" id="UFc-gH-yP1">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="107"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zgv-ha-Wsv">
-                                            <rect key="frame" x="8" y="8" width="300" height="88"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eiw-FB-e1m">
-                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="88"/>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-Xp-pIC">
-                                                    <rect key="frame" x="72" y="9.5" width="228" height="69"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="妖神记" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-Rs-sDn">
-                                                            <rect key="frame" x="8" y="8" width="61.5" height="24"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2017-12-25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLg-53-Hor">
-                                                            <rect key="frame" x="8" y="32" width="66.5" height="14.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="更新至137话" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwV-LF-MbP">
-                                                            <rect key="frame" x="8" y="46.5" width="69" height="14.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="300" id="4OQ-qY-Cfr"/>
-                                            </constraints>
-                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eiw-FB-e1m">
+                                            <rect key="frame" x="8" y="9" width="73" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-Rs-sDn">
+                                            <rect key="frame" x="89" y="15" width="245" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="更新至137话" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwV-LF-MbP">
+                                            <rect key="frame" x="89" y="66" width="245" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017-12-25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLg-53-Hor">
+                                            <rect key="frame" x="89" y="42" width="245" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="zgv-ha-Wsv" firstAttribute="centerY" secondItem="UFc-gH-yP1" secondAttribute="centerY" id="nWu-gr-tw9"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="chapter" destination="DwV-LF-MbP" id="w5Y-sD-Yne"/>
@@ -78,7 +65,7 @@
                             <outlet property="delegate" destination="bR9-Fq-VlG" id="12b-dY-JPv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tracker" id="X66-ml-tum"/>
+                    <navigationItem key="navigationItem" title="最近更新" id="X66-ml-tum"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDE-50-Dqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

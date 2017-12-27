@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ComicCell: UITableViewCell {
 
@@ -17,10 +18,18 @@ class ComicCell: UITableViewCell {
     
     var comic : Comic? {
         didSet {
-            cover.image = UIImage(named: "DefaultCover")
             name.text = comic?.name
-            date.text = "2017-12-15"
-            chapter.text = "更新至\(comic?.lastestChapter)话"
+            date.text = "更新时间： \(comic!.date)"
+            chapter.text = "最新章节：\(comic!.chapter)"
+
+            Alamofire.request(comic!.cover).responseData { response in
+                if let data = response.result.value {
+                    self.cover.image = UIImage(data: data)
+                } else {
+                    print("load \(self.comic!.cover) fail")
+                    print("error code: \(response.error)")
+                }
+            }
         }
     }
     

@@ -11,11 +11,30 @@ import Alamofire
 
 class Manhuagui {
     
-    func crawl(url: String) {
+    func crawl(url: String, handler: @escaping (Comic)->Void) {
         Alamofire.request(url).responseString { resp in
             if let html = resp.value {
-                let range = html.range(of: "<h1>(.*?)</h1>", options: String.CompareOptions.regularExpression, range: nil, locale: nil)
-                print(html.substring(with: range!))
+                var range = html.range(of: "<h1>(.*?)</h1>", options: .regularExpression)
+                let name = html.substring(with: range!)
+                        .replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
+
+                range = html.range(of: "更新至：(.*?)</span>", options: .regularExpression)
+                let chapter = html.substring(with: range!)
+                        .replacingOccurrences(of: "更新至：", with: "")
+                        .replacingOccurrences(of: "</span>", with: "")
+
+                range = html.range(of: "<span class=\"red\">(\\d{4}-\\d+-\\d+)</span>", options: .regularExpression)
+                let date = html.substring(with: range!)
+                        .replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
+
+                range = html.range(of: "<p class=\"hcover\"><img src=\"(.*?)\" alt", options: .regularExpression)
+                let cover = html.substring(with: range!)
+                        .replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
+                        .replacingOccurrences(of: "<img src=\"", with: "")
+                        .replacingOccurrences(of: "\" alt", with: "")
+
+                let comic = Comic(cover: cover, name: name, date: date, chapter: chapter)
+                handler(comic)
             }
         }
     }

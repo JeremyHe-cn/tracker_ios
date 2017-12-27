@@ -10,7 +10,20 @@ import UIKit
 
 class MainViewController: UITableViewController {
     
-    var datas : [Comic] = [Comic(name: "星武神诀", lastestChapter: "200")]
+    var datas = [
+        "http://www.manhuagui.com/comic/883/",
+        "http://www.manhuagui.com/comic/8356/",
+        "http://www.manhuagui.com/comic/25956/",
+        "http://www.manhuagui.com/comic/17965/",
+        "http://www.manhuagui.com/comic/7708/",
+        "http://www.manhuagui.com/comic/18883/",
+        "http://www.manhuagui.com/comic/21963/",
+        "http://www.manhuagui.com/comic/15761/",
+        "http://www.manhuagui.com/comic/16460/",
+        "http://www.manhuagui.com/comic/7620/",
+        "http://www.manhuagui.com/comic/7580/",
+        "http://www.manhuagui.com/comic/20568/"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +33,7 @@ class MainViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        let manhuagui = Manhuagui()
-        manhuagui.crawl(url: "http://www.manhuagui.com/comic/883/")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,10 +54,12 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "comic", for: indexPath)
-
-        let comic = datas[indexPath.row]
-        if let comicCell = cell as? ComicCell {
-            comicCell.comic = comic
+        
+        let manhuagui = Manhuagui()
+        manhuagui.crawl(url: datas[indexPath.row]) { comic in
+            if let comicCell = cell as? ComicCell {
+                comicCell.comic = comic
+            }
         }
 
         return cell
