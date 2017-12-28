@@ -22,7 +22,10 @@ class MainViewController: UITableViewController {
         "http://www.manhuagui.com/comic/16460/",
         "http://www.manhuagui.com/comic/7620/",
         "http://www.manhuagui.com/comic/7580/",
-        "http://www.manhuagui.com/comic/20568/"
+        "http://www.manhuagui.com/comic/20568/",
+        "http://www.manhuagui.com/comic/1128/",
+        "http://www.manhuagui.com/comic/2863/",
+        "http://www.manhuagui.com/comic/5141/"
     ]
     
     var datas = [Comic]() {

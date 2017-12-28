@@ -8,27 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		1584D27507E7FF1181ACADAE /* Pods_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFA9FA7DE520A476F07FC9E /* Pods_Tracker.framework */; };
+		AA5D1762BF3E9790F9E9ED91 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D150E318B09314FDB103D /* Comic.swift */; };
+		AA5D1CFE61FB0ED3FDC2EDB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D1B6A54843D25582B5880 /* AppDelegate.swift */; };
+		AA5D1D822EB1B553A4098D79 /* Manhuagui.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D184FA33DC3A632BAAC17 /* Manhuagui.swift */; };
 		DE4A839D1FF14BBA00E663BD /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4A839C1FF14BBA00E663BD /* ComicCell.swift */; };
-		DEB6EBD21FEFED7F006F5E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6EBD11FEFED7F006F5E52 /* AppDelegate.swift */; };
 		DEB6EBD71FEFED7F006F5E52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB6EBD51FEFED7F006F5E52 /* Main.storyboard */; };
-		DEB6EBD91FEFED7F006F5E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB6EBD81FEFED7F006F5E52 /* Assets.xcassets */; };
 		DEB6EBE41FEFF000006F5E52 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6EBE31FEFF000006F5E52 /* MainViewController.swift */; };
-		DEB6EBE61FEFF0A1006F5E52 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6EBE51FEFF0A1006F5E52 /* Comic.swift */; };
-		DECA08991FF28ED600686C2B /* Manhuagui.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA08981FF28ED600686C2B /* Manhuagui.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4070954CEA76C49BBCE89131 /* Pods-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracker/Pods-Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		AA5D150E318B09314FDB103D /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		AA5D184FA33DC3A632BAAC17 /* Manhuagui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manhuagui.swift; sourceTree = "<group>"; };
+		AA5D1B3F4BA7C70E529F95BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		AA5D1B6A54843D25582B5880 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFA9FA7DE520A476F07FC9E /* Pods_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4A839C1FF14BBA00E663BD /* ComicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
 		DEB6EBCE1FEFED7F006F5E52 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEB6EBD11FEFED7F006F5E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB6EBD61FEFED7F006F5E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DEB6EBD81FEFED7F006F5E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DEB6EBDD1FEFED7F006F5E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEB6EBE31FEFF000006F5E52 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		DEB6EBE51FEFF0A1006F5E52 /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
-		DECA08981FF28ED600686C2B /* Manhuagui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manhuagui.swift; sourceTree = "<group>"; };
 		FC5FFC2E26FF8EF4A2A2C070 /* Pods-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracker/Pods-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +50,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA5D11DA3150EE828E0408B4 /* spider */ = {
+			isa = PBXGroup;
+			children = (
+				AA5D184FA33DC3A632BAAC17 /* Manhuagui.swift */,
+			);
+			path = spider;
+			sourceTree = "<group>";
+		};
+		AA5D1618604432D740C96F14 /* support files */ = {
+			isa = PBXGroup;
+			children = (
+				AA5D1B6A54843D25582B5880 /* AppDelegate.swift */,
+			);
+			path = "support files";
+			sourceTree = "<group>";
+		};
+		AA5D1F215CE2067286276FEC /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				AA5D150E318B09314FDB103D /* Comic.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
 		DEB6EBC51FEFED7E006F5E52 = {
 			isa = PBXGroup;
 			children = (
@@ -73,24 +95,15 @@
 		DEB6EBD01FEFED7F006F5E52 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				DECA08971FF28E5C00686C2B /* spider */,
-				DEB6EBD11FEFED7F006F5E52 /* AppDelegate.swift */,
 				DEB6EBD51FEFED7F006F5E52 /* Main.storyboard */,
 				DE4A839C1FF14BBA00E663BD /* ComicCell.swift */,
 				DEB6EBE31FEFF000006F5E52 /* MainViewController.swift */,
-				DEB6EBE51FEFF0A1006F5E52 /* Comic.swift */,
-				DEB6EBD81FEFED7F006F5E52 /* Assets.xcassets */,
-				DEB6EBDD1FEFED7F006F5E52 /* Info.plist */,
+				AA5D1F215CE2067286276FEC /* entity */,
+				AA5D1618604432D740C96F14 /* support files */,
+				AA5D1B3F4BA7C70E529F95BD /* Info.plist */,
+				AA5D11DA3150EE828E0408B4 /* spider */,
 			);
 			path = Tracker;
-			sourceTree = "<group>";
-		};
-		DECA08971FF28E5C00686C2B /* spider */ = {
-			isa = PBXGroup;
-			children = (
-				DECA08981FF28ED600686C2B /* Manhuagui.swift */,
-			);
-			name = spider;
 			sourceTree = "<group>";
 		};
 		E7204C46A290F3766705638D /* Pods */ = {
@@ -165,7 +178,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB6EBD91FEFED7F006F5E52 /* Assets.xcassets in Resources */,
 				DEB6EBD71FEFED7F006F5E52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,11 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB6EBD21FEFED7F006F5E52 /* AppDelegate.swift in Sources */,
 				DE4A839D1FF14BBA00E663BD /* ComicCell.swift in Sources */,
-				DECA08991FF28ED600686C2B /* Manhuagui.swift in Sources */,
-				DEB6EBE61FEFF0A1006F5E52 /* Comic.swift in Sources */,
 				DEB6EBE41FEFF000006F5E52 /* MainViewController.swift in Sources */,
+				AA5D1762BF3E9790F9E9ED91 /* Comic.swift in Sources */,
+				AA5D1CFE61FB0ED3FDC2EDB9 /* AppDelegate.swift in Sources */,
+				AA5D1D822EB1B553A4098D79 /* Manhuagui.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

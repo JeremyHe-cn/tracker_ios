@@ -22,12 +22,18 @@ class ComicCell: UITableViewCell {
             date.text = "更新时间： \(comic!.date)"
             chapter.text = "最新章节：\(comic!.chapter)"
 
-            Alamofire.request(comic!.cover).responseData { response in
-                if let data = response.result.value {
-                    self.cover.image = UIImage(data: data)
-                } else {
-                    print("load \(self.comic!.cover) fail")
-                    print("error code: \(response.error)")
+            if let url = comic?.cover {
+                Alamofire.request(url).responseData { response in
+                    if self.comic!.cover != url {
+                        return
+                    }
+
+                    if let data = response.result.value {
+                        self.cover.image = UIImage(data: data)
+                    } else {
+                        print("load \(self.comic!.cover) fail")
+                        print("error code: \(response.error!)")
+                    }
                 }
             }
         }

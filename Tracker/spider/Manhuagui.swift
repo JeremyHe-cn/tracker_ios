@@ -15,20 +15,20 @@ class Manhuagui {
         Alamofire.request(url).responseString { resp in
             if let html = resp.value {
                 var range = html.range(of: "<h1>(.*?)</h1>", options: .regularExpression)
-                let name = html.substring(with: range!)
+                let name = html[range!]
                         .replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
 
                 range = html.range(of: "更新至：(.*?)</span>", options: .regularExpression)
-                let chapter = html.substring(with: range!)
+                let chapter = html[range!]
                         .replacingOccurrences(of: "更新至：", with: "")
                         .replacingOccurrences(of: "</span>", with: "")
 
                 range = html.range(of: "<span class=\"red\">(\\d{4}-\\d+-\\d+)</span>", options: .regularExpression)
-                let date = html.substring(with: range!)
+                let date = html[range!]
                         .replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
 
                 range = html.range(of: "<p class=\"hcover\"><img src=\"(.*?)\" alt", options: .regularExpression)
-                let cover = html.substring(with: range!)
+                let cover = html[range!]
                         .replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
                         .replacingOccurrences(of: "<img src=\"", with: "")
                         .replacingOccurrences(of: "\" alt", with: "")
