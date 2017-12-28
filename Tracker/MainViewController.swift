@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UITableViewController {
     
-    var datas = [
+    let urls = [
         "http://www.manhuagui.com/comic/883/",
         "http://www.manhuagui.com/comic/8356/",
         "http://www.manhuagui.com/comic/25956/",
@@ -24,24 +24,24 @@ class MainViewController: UITableViewController {
         "http://www.manhuagui.com/comic/7580/",
         "http://www.manhuagui.com/comic/20568/"
     ]
+    
+    var datas = [Comic]() {
+        didSet {
+            datas.sort { left, right in left.date > right.date }
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        let manhuagui = Manhuagui()
+        for url in urls {
+            manhuagui.crawl(url: url, handler: { (comic) in
+                self.datas.append(comic)
+            })
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -54,12 +54,9 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "comic", for: indexPath)
-        
-        let manhuagui = Manhuagui()
-        manhuagui.crawl(url: datas[indexPath.row]) { comic in
-            if let comicCell = cell as? ComicCell {
-                comicCell.comic = comic
-            }
+
+        if let cell = cell as? ComicCell {
+            cell.comic = datas[indexPath.row]
         }
 
         return cell
