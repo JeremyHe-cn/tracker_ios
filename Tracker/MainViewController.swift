@@ -35,6 +35,10 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fetchDatas()
+    }
+
+    private func fetchDatas() {
         let manhuagui = Manhuagui()
         for url in urls {
             manhuagui.crawl(url: url, handler: { (comic) in
@@ -61,7 +65,6 @@ class MainViewController: UITableViewController {
 
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
