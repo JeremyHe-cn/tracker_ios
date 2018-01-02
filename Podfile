@@ -7,5 +7,6 @@ target 'Tracker' do
 
   # Pods for Tracker
   pod 'Alamofire', '~> 4.5'
+  pod 'CrossroadRegex'
 
 end

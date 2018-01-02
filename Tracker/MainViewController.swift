@@ -31,21 +31,42 @@ class MainViewController: UITableViewController {
     var datas = [Comic]() {
         didSet {
             datas.sort { left, right in left.date > right.date }
+
             tableView.reloadData()
         }
     }
 
+    let manhuagui = Manhuagui()
+    private var loadingCount = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchDatas()
+        self.automaticallyAdjustsScrollViewInsets = false
+
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(fetchData), for: UIControlEvents.valueChanged)
+
+        fetchData()
     }
 
-    private func fetchDatas() {
-        let manhuagui = Manhuagui()
+    @objc func fetchData() {
+        if loadingCount > 0 {
+            return
+        }
+
+        loadingCount = urls.count
+        datas.removeAll()
         for url in urls {
             manhuagui.crawl(url: url, handler: { (comic) in
-                self.datas.append(comic)
+                self.loadingCount -= 1
+                if self.loadingCount == 0 {
+                    self.refreshControl?.endRefreshing()
+                }
+
+                if let comic = comic {
+                    self.datas.append(comic)
+                }
             })
         }
     }
